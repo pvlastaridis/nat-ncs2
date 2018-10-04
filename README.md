@@ -12,7 +12,7 @@ How to compile and deploy webserver on Ubuntu
     sudo apt-get update && sudo apt-get install yarn
     sudo apt-get install hmmer
 
-## 2. Clone Projectm compile and deploy
+## 2. Clone Project, compile and deploy
 
     git clone https://github.com/pvlastaridis/nat-ncs2.git
     cd nat-ncs2/
