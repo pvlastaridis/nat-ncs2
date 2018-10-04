@@ -1,0 +1,40 @@
+<div *ngIf="protein">
+    <h3>Meme Motifs for Protein {{protein.name}}</h3>
+    <br>
+    <!--<h4>Graph of Motifs Found on Protein Sequence</h4>-->
+    <br>
+</div>
+<div id="main"></div>
+<div *ngIf="protein">
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>Motif Logo</th>
+            <th>Annotation</th>
+            <th>Motif Name</th>
+            <th>E-value</th>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let result of protein.motifs">
+            <td style="vertical-align: middle;">{{result.motifNo}}</td>
+            <td style="padding-top: 0;padding-bottom: 0;"><img class="logo" src="/images/{{result.name}}.png" width="300" /></td>
+            <td style="vertical-align: middle;"><ng-template #popContent><div [innerHTML]="result.annotation"></div></ng-template>
+                <button *ngIf="result.annotation" type="button" class="btn btn-outline-secondary" placement="bottom"
+                        style="background-color: #e47272;" [ngbPopover]="popContent" popoverTitle="Motif Annotation" container="body">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button></td>
+            <td style="vertical-align: middle;">{{result.name}}</td>
+            <td style="vertical-align: middle;">{{result.eValue}}</td>
+            <td style="vertical-align: middle;">{{result.locationFrom}}</td>
+            <td style="vertical-align: middle;">{{result.locationTo}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,23 @@
+entity Psite {
+  motif String required,
+  identifier String required,
+  protein String required,
+  aminoacid String required,
+  position Integer required,
+  protein String required,
+  gene String
+}
+
+entity Publication {
+ pubmedId String required,
+ title String,
+ journal String,
+ year Integer,
+ authors String
+}
+
+relationship ManyToMany {
+	Psite{identifier}
+    to
+  Publication{pubmedId}
+}

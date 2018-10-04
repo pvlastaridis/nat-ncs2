@@ -1,0 +1,21 @@
+{
+    "upload" : {
+        "home": {
+            "title": "Uploads",
+            "createLabel": "Create a new Upload",
+            "createOrEditLabel": "Create or edit a Upload"
+        },
+        "created": "A new Upload is created with identifier {{ param }}",
+        "updated": "A Upload is updated with identifier {{ param }}",
+        "deleted": "A Upload is deleted with identifier {{ param }}",
+        "delete": {
+            "question": "Are you sure you want to delete Upload {{ id }}?"
+        },
+        "detail": {
+            "title": "Upload"
+        },
+        "threshold": "Threshold",
+        "fasta_text": "Paste Fasta Text",
+        "fasta_file": "Upload Fasta File"
+    }
+}

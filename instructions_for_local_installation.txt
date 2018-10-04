@@ -1,0 +1,16 @@
+We tried running the server on Ubuntu 18.04 Desktop with the following steps
+
+A) Install Java 8
+1) sudo add-apt-repository ppa:webupd8team/java
+2) sudo apt-get update
+3) sudo apt-get install oracle-java8-installer
+4) sudo apt-get install oracle-java8-set-default
+
+B) Install Hmmer
+1) sudo apt-get install hmmer
+
+C)
+Unzip folder target.zip to folder target and then execute:
+java -jar target/nat-ncs2-0.0.1-SNAPSHOT.war
+
+Interact with the server by visiting its homepage with a browser at the address http://localhost:8080 

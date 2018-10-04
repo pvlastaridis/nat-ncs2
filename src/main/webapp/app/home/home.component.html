@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-8 offset-2">
+        <!--<h1 class="display-4">Welcome, to our Project Webpage</h1>-->
+        <!--<h3>NAT/NCS2 nucleotide transporter prediction server</h3>-->
+
+        <div [ngSwitch]="isAuthenticated()">
+            <div class="alert alert-success" *ngSwitchCase="true">
+                <span *ngIf="account" jhiTranslate="home.logged.message"
+                      translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}".</span>
+            </div>
+            <!--<div class="alert alert-warning" *ngSwitchCase="false">-->
+                <!--<span>If you want to upload you data in fasta format go</span>-->
+                <!--<a class="alert-link" routerLink="upload"> here</a>.<span></span>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+<h2 style="text-align: center">NAT/NCS2 Hound: Prediction and Evolutionary Classification Server<br /> of prokaryotic NAT/NCS2 transporters</h2>
+<div><img src="/images/research.png" width="800" style="display: block; margin: 0 auto;">
+</div>
+<p style="text-align: center; font-size: small">Source: Karena & Frillingos, J Biol Chem. 2011 Nov 11;286(45):39595-605.</p>
+
+<jhi-upload-results></jhi-upload-results>

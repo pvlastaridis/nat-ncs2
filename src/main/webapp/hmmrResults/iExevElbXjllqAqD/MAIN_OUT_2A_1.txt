@@ -1,0 +1,295 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             ./tmp_seq_2a_1.fasta
+# target HMM database:             /opt/tomcat/webapps/HMMDB/HMMDB_2A
+# output directed to file:         ./MAIN_OUT_2A_1.txt
+# per-dom hits tabular output:     ./HMMDOM_2A_1.txt
+# profile reporting threshold:     E-value <= 0.01
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       sp|P0AGM7|URAA_ECOLI  [L=429]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                      -----------
+   1.3e-154  506.0  39.4   1.6e-154  505.6  39.4    1.1  1  NCS2_SF1_C2-Uracil             
+     9e-115  374.7  44.8   1.1e-114  374.4  44.8    1.0  1  2.A.40.7                       
+    3.8e-95  309.7  51.1    4.9e-95  309.3  51.1    1.1  1  NCS2_SF1_GEN                   
+    9.9e-72  232.6  39.9    3.1e-71  231.0  39.9    1.7  1  NCS2_SF1_C1-Xanthine-UricAcid  
+    8.7e-42  134.0  30.6    1.6e-41  133.1  30.6    1.3  1  NCS2_SF1_C6                    
+    3.1e-41  132.3  42.5    1.4e-40  130.1  42.5    1.9  1  NCS2_SF1_C5                    
+    9.3e-39  124.0  37.9    4.2e-38  121.9  37.9    2.0  1  NCS2_SF1_C4-Arc-Bac-Euk        
+      4e-29   92.4  31.9    6.8e-29   91.6  31.9    1.5  1  NCS2_SF1_C3-YbbY               
+
+
+Domain annotation for each model (and alignments):
+>> NCS2_SF1_C2-Uracil  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  505.6  39.4  4.2e-155  1.6e-154       2     391 ..       8     407 ..       7     408 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 505.6 bits;  conditional E-value: 4.2e-155
+    NCS2_SF1_C2-Uracil   2 veeklklgktlllglQhllamfgAtvlvplltgldpsvaLltsGigTllfllitkgkvPaylGSSfaFiapiiavakaaglaaalggil 90 
+                           v+e+++l +t++l+lQhl+amfgAtvlvp+l+ ++p+++Ll++GigTll+l+i+kgk+PaylGSSfaFi+p++++    g++ algg++
+  sp|P0AGM7|URAA_ECOLI   8 VSERPPLLQTIPLSLQHLFAMFGATVLVPVLFHINPATVLLFNGIGTLLYLFICKGKIPAYLGSSFAFISPVLLLL-PLGYEVALGGFI 95 
+                           6799**********************************************************************97.99********** PP
+
+    NCS2_SF1_C2-Uracil  91 vaGlvyilvaliiklvGtkwiekllPpvvvGpvvivIGLsLapvavkma...........skallvalvtllvvilvsvllkgflklip 168
+                           ++G++++lv++i+k++Gt+w++ l+Pp+ +G++v+vIGL+La+va++ma           sk+++++++tl+v++l svl++gfl +ip
+  sp|P0AGM7|URAA_ECOLI  96 MCGVLFCLVSFIVKKAGTGWLDVLFPPAAMGAIVAVIGLELAGVAAGMAgllpaegqtpdSKTIIISITTLAVTVLGSVLFRGFLAIIP 184
+                           ************************************************8555555555555899************************* PP
+
+    NCS2_SF1_C2-Uracil 169 illgivvGyllalilglvdfsavaeaawfalPeftlpkfslkaillilpvalvtiaEhigdvlavskvvgkdllkdpglhrtllgdGla 257
+                           il+g++vGy+l++++g+vd++++ +a+wfalP++ +p+f++ ail+ilp+alv+iaEh+g++++++++v+kdll+dpglhr+++++Gl+
+  sp|P0AGM7|URAA_ECOLI 185 ILIGVLVGYALSFAMGIVDTTPIINAHWFALPTLYTPRFEWFAILTILPAALVVIAEHVGHLVVTANIVKKDLLRDPGLHRSMFANGLS 273
+                           ***************************************************************************************** PP
+
+    NCS2_SF1_C2-Uracil 258 tivagllGgppnttYgEnigvlaitrvysvavilvAaviaillsfvgklgalistiPtaVlgGvsilLfGvIaasGlrilvenkvdlsk 346
+                           t+++g++G++pnttYgEnigv+aitrvys++vi++Aa++aills+vgkl+a i++iP +V+gGvs+lL+GvI+asG+r+l+e+kvd++k
+  sp|P0AGM7|URAA_ECOLI 274 TVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGVIGASGIRVLIESKVDYNK 362
+                           ***************************************************************************************** PP
+
+    NCS2_SF1_C2-Uracil 347 krnliivavilviGigglslkigevelsgialaaivgillnlilp 391
+                           ++nli+++vil+iG++g++++ig  el+g+ala+ivgi l+li++
+  sp|P0AGM7|URAA_ECOLI 363 AQNLILTSVILIIGVSGAKVNIGAAELKGMALATIVGIGLSLIFK 407
+                           ****************************************99985 PP
+
+>> 2.A.40.7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  374.4  44.8  2.8e-115  1.1e-114       5     428 ..       7     409 ..       3     414 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 374.4 bits;  conditional E-value: 2.8e-115
+              2.A.40.7   5 kleerpplrqelllGlqhfLamfggtivvplllasalglsqeelaalisttllvsGigtllqtmglgarlplalgpsfafvaalaltvv 93 
+                           +++erppl q++ l+lqh++amfg+t++vp+l+    ++++       +t+ll+ Gigtll++++++ ++p++lg+sfaf++ + l + 
+  sp|P0AGM7|URAA_ECOLI   7 GVSERPPLLQTIPLSLQHLFAMFGATVLVPVLF----HINP-------ATVLLFNGIGTLLYLFICKGKIPAYLGSSFAFISPVLLLLP 84 
+                           799******************************....****.......***************************************** PP
+
+              2.A.40.7  94 egqgislrallgaiilsgllellisll....glgwllrlipplvtgpvvalIGLslaqvalknagggeanaskgslkhlllallvlvli 178
+                            g    ++++lg++i++g+l++l+s++    g gwl  l+pp  +g++va+IGL+la va+ +ag+++a+ ++ ++k++++++++l+++
+  sp|P0AGM7|URAA_ECOLI  85 LG----YEVALGGFIMCGVLFCLVSFIvkkaGTGWLDVLFPPAAMGAIVAVIGLELAGVAAGMAGLLPAEGQTPDSKTIIISITTLAVT 169
+                           *9....********************95555679******************************************************* PP
+
+              2.A.40.7 179 vllsrylkgllkllavligivvgwilalilglvdfsgvseapwlsipipfefglpafspqailamlavalvailesiGtlyavarlagl 267
+                           vl s++ +g+l+++++lig++vg++l++++g+vd++++ +a+w+++p+   +++p f++ ail++l++alv i+e++G+l+++a+++++
+  sp|P0AGM7|URAA_ECOLI 170 VLGSVLFRGFLAIIPILIGVLVGYALSFAMGIVDTTPIINAHWFALPT---LYTPRFEWFAILTILPAALVVIAEHVGHLVVTANIVKK 255
+                           ***********************************************6...8************************************* PP
+
+              2.A.40.7 268 plekeprlsralladGlssviagllGttpvtsfvenigvialtgvtsrtvivvgalillvlglvpklaallasIPspvlGgalivvFgv 356
+                           +l ++p+l+r+++a+Gls+vi+g++G+tp+t+++enigv+a+t+v+s++vi  +a+++++l++v+klaa++++IP pv+Gg++++++gv
+  sp|P0AGM7|URAA_ECOLI 256 DLLRDPGLHRSMFANGLSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGV 344
+                           ***************************************************************************************** PP
+
+              2.A.40.7 357 iaasglril..skadltsarnlfivavslflglsittvpgiilglpsllelllssgiavggilavlLnlllpgk 428
+                           i asg+r l  sk+d+++a+nl++++v+l++g+s         g ++++     +g+a+++i+++ L l+++  
+  sp|P0AGM7|URAA_ECOLI 345 IGASGIRVLieSKVDYNKAQNLILTSVILIIGVS---------GAKVNIGAAELKGMALATIVGIGLSLIFKLI 409
+                           *******886689*********************.........77799999999****************9875 PP
+
+>> NCS2_SF1_GEN  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  309.3  51.1   1.3e-95   4.9e-95       3     374 .]      17     406 ..      15     406 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 309.3 bits;  conditional E-value: 1.3e-95
+          NCS2_SF1_GEN   3 alllglQhvlamfaatvlvplivgsalglsaaetalliqaalfvsGiatllqlli.gsrlpivlgssfafiapiia.....iaallgai 85 
+                           +++l+lQh++amf+atvlvp+++            +++++ l++ Gi+tll+l+i ++++p++lgssfafi+p+++     ++++lg++
+  sp|P0AGM7|URAA_ECOLI  17 TIPLSLQHLFAMFGATVLVPVLFH-----------INPATVLLFNGIGTLLYLFIcKGKIPAYLGSSFAFISPVLLllplgYEVALGGF 94 
+                           79*********************7...........*****************9863899**************98633333699***** PP
+
+          NCS2_SF1_GEN  86 ivaGlvlillgllik.....klrklfppvVtGtvvlliGlsLapvavkgaagl..........knlllalvtllvilllsvfgkgflkl 159
+                           i++G++++l+++++k     +l+ lfpp+ +G++v++iGl+La+va+++a gl          k+++++++tl+v++l sv+++gfl  
+  sp|P0AGM7|URAA_ECOLI  95 IMCGVLFCLVSFIVKkagtgWLDVLFPPAAMGAIVAVIGLELAGVAAGMA-GLlpaegqtpdsKTIIISITTLAVTVLGSVLFRGFLAI 182
+                           *************863334489************************9776.54233333333379************************ PP
+
+          NCS2_SF1_GEN 160 isiLiGivvGylvalllglvdfsavaeapwfalpfafgpefdlgailtmllvalvlivetiGdilav.eivgre.lkdkrlsrglladG 246
+                           i+iLiG++vGy++++++g+vd++++ +a+wfalp  ++p+f++ ailt+l++alv+i+e++G+++++ +iv+++ l+d++l+r+++a+G
+  sp|P0AGM7|URAA_ECOLI 183 IPILIGVLVGYALSFAMGIVDTTPIINAHWFALPTLYTPRFEWFAILTILPAALVVIAEHVGHLVVTaNIVKKDlLRDPGLHRSMFANG 271
+                           ***************************************************************987625677764699*********** PP
+
+          NCS2_SF1_GEN 247 latllaglfggvpnttysenvGvvalTgvasryvvliaavilillgffpklgallatiPspVlgGallvlfgmiaasGirilkdl.... 331
+                           l+t+++g+fg++pntty+en+Gv+a+T+v+s++v+  aa+++ill++++kl+a++++iP pV+gG++l+l+g+i asGir+l ++    
+  sp|P0AGM7|URAA_ECOLI 272 LSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGVIGASGIRVLIESkvdy 360
+                           *********************************************************************************98752222 PP
+
+          NCS2_SF1_GEN 332 .dsrnllivavslvlGlflpal..lqllssgialgalvaillnlll 374
+                            + +nl+ ++v+l++G+   ++   +   +g+al+++v+i l+l++
+  sp|P0AGM7|URAA_ECOLI 361 nKAQNLILTSVILIIGVSGAKVniGAAELKGMALATIVGIGLSLIF 406
+                           2589*************6655411455679*************997 PP
+
+>> NCS2_SF1_C1-Xanthine-UricAcid  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  231.0  39.9   7.9e-72   3.1e-71       5     388 ..       6     381 ..       2     406 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 231.0 bits;  conditional E-value: 7.9e-72
+  NCS2_SF1_C1-Xanthine-UricAcid   5 yeldekpplgkalllglQHvlamyagavtvplivagalglsaeetalLisaallvaGiatllqllgigkiGarLpvvmgv 84 
+                                     ++ e+ppl ++++l+lQH++am+ ++v vp+++    +++++       + ll+ Gi+tll l+ +     ++p   g 
+           sp|P0AGM7|URAA_ECOLI   6 IGVSERPPLLQTIPLSLQHLFAMFGATVLVPVLF----HINPA-------TVLLFNGIGTLLYLFICK---GKIPAYLGS 71 
+                                    5789***************************986....56776.......56899*********9885...89******* PP
+
+  NCS2_SF1_C1-Xanthine-UricAcid  85 sfafvapmiaigseaglaailGavivgglveillapffkk.....lrrffppvVtGtvvllIGlsLipvaikwiag.aga 158
+                                    sfaf++p++ +    g++++lG  i++g++ +l+++++kk     l  +fpp  +G++v +IGl+L  va+++++   ++
+           sp|P0AGM7|URAA_ECOLI  72 SFAFISPVLLLLP-LGYEVALGGFIMCGVLFCLVSFIVKKagtgwLDVLFPPAAMGAIVAVIGLELAGVAAGMAGLlPAE 150
+                                    *********9976.78*********************98744444788***********************999889778 PP
+
+  NCS2_SF1_C1-Xanthine-UricAcid 159 edfgslknlllallvlvvilllnrfgkgflkslavLiGlvvGtivalllgmvdfssvaeaawfalpkpfkfglpeFdlaa 238
+                                     +  + k +++++++l+v++l + +++gfl+ + +LiG++vG+++++++g vd++++ +a+wfalp++  +  p+F++ a
+           sp|P0AGM7|URAA_ECOLI 151 GQTPDSKTIIISITTLAVTVLGSVLFRGFLAIIPILIGVLVGYALSFAMGIVDTTPIINAHWFALPTL--YT-PRFEWFA 227
+                                    9999**************************************************************99..88.9****** PP
+
+  NCS2_SF1_C1-Xanthine-UricAcid 239 ilsllivflvtmvettGdllavgeivgrev.tekelsgglradglasllaglfnsfpnttfsqNvGlvalTgvasRfvva 317
+                                    il++l  +lv+++e +G+l+ +++iv++++ ++  l++++ a+gl+++++g+f+s+pntt+++N+G++a+T+v s +v+ 
+           sp|P0AGM7|URAA_ECOLI 228 ILTILPAALVVIAEHVGHLVVTANIVKKDLlRDPGLHRSMFANGLSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIG 307
+                                    **************************7666499*********************************************** PP
+
+  NCS2_SF1_C1-Xanthine-UricAcid 318 vagviLivlGllPklgalvaaiPqpVLGGatlvmFgmvaasGikilskvdl...trrnllivavslalGlgvtl 388
+                                     a+++ i+l+ + kl+a++++iP pV+GG++l+++g++ asGi++l ++++   + +nl+  +v l +G+  + 
+           sp|P0AGM7|URAA_ECOLI 308 GAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGVIGASGIRVLIESKVdynKAQNLILTSVILIIGVSGAK 381
+                                    **********************************************8777766777888888888888876544 PP
+
+>> NCS2_SF1_C6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  133.1  30.6   4.2e-42   1.6e-41      10     398 ..       6     377 ..       2     384 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 133.1 bits;  conditional E-value: 4.2e-42
+           NCS2_SF1_C6  10 vgvdekislsqalllglqhvlamdvyvvpliiagllslsvaekaaliqstFlaaGiatliqakfll.klpvaqGpsfvpigaiagiyla 97 
+                           +gv e+ +l q++ l+lqh++am  + + +++  l+ ++   +++      l  Gi+tl+   ++  k+p   G sf  i+ ++ +   
+  sp|P0AGM7|URAA_ECOLI   6 IGVSERPPLLQTIPLSLQHLFAM--FGATVLVPVLFHINP--ATV-----LLFNGIGTLLYLFICKgKIPAYLGSSFAFISPVLLL--- 82 
+                           67778888888899999999988..555555555555443..333.....3568******98766449**************9998... PP
+
+           NCS2_SF1_C6  98 ngggkaglatvlgallvgallvillGl..tklfskivrklipplvggtiilvvGlsLlPvaln.dnifkaeg.slgq.nillalvtaav 181
+                                 g +++lg  ++  +l +l+ +   k  +  ++ l pp   g i+ v+Gl L  va   ++++ aeg +  +  i++++ t+a 
+  sp|P0AGM7|URAA_ECOLI  83 ---LPLGYEVALGGFIMCGVLFCLVSFivKKAGTGWLDVLFPPAAMGAIVAVIGLELAGVAAGmAGLLPAEGqTPDSkTIIISITTLA- 167
+                           ...578999999999999999999987546778889*********************9988752578888884333303444444433. PP
+
+           NCS2_SF1_C6 182 lvvavllgeklkklgkvlrigsviialvvGtlvaslmglldlssvaeAswfslPklavldfglkfdlsailtmliiylvllaettGtWf 270
+                              +++lg+ l  +  +l i+ ++i ++vG  +  +mg++d +++ +A+wf+lP+l    ++ +f++ ailt+l   lv++ae +G  +
+  sp|P0AGM7|URAA_ECOLI 168 ---VTVLGSVL--FRGFLAIIPILIGVLVGYALSFAMGIVDTTPIINAHWFALPTL----YTPRFEWFAILTILPAALVVIAEHVGHLV 247
+                           ...34555554..7889***************************************....***************************** PP
+
+           NCS2_SF1_C6 271 avsavteekl.tderinrgviGeglgcliasllGgtPvtgyssnaGvisitgvasrkvfiaagvllivlglvgKlsaliaaiPsavigg 358
+                           +++++++++l  d  + r+++ +gl+++i+ ++G+tP t+y  n Gv++it+v s  v+  a+++ i+l+ vgKl+a i++iP +v+gg
+  sp|P0AGM7|URAA_ECOLI 248 VTANIVKKDLlRDPGLHRSMFANGLSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGG 336
+                           ***999887527889************************************************************************** PP
+
+           NCS2_SF1_C6 359 vfavvcviillsGlkvikeveld.eremlvvgipilltlal 398
+                           v +++  +i  sG++v+ e ++d ++++ ++  +++l++++
+  sp|P0AGM7|URAA_ECOLI 337 VSLLLYGVIGASGIRVLIESKVDyNKAQNLILTSVILIIGV 377
+                           ****************9998886356677777788877765 PP
+
+>> NCS2_SF1_C5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.1  42.5   3.7e-41   1.4e-40      10     432 ..       7     408 ..       4     427 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 130.1 bits;  conditional E-value: 3.7e-41
+           NCS2_SF1_C5  10 gvddrpPlgtllllalQhvalalvllvypvlaaraaglsaeeaqslvaatllamglgtllqawrgrvGsGyllpavpspaylpasllaa 98 
+                           gv +rpPl +++ l+lQh++ ++   v++ ++ ++  ++           ll  g+gtll      +  G + + + s++++   +l++
+  sp|P0AGM7|URAA_ECOLI   7 GVSERPPLLQTIPLSLQHLFAMFGATVLVPVLFHINPAT----------VLLFNGIGTLLYL---FICKGKIPAYLGSSFAFISPVLLL 82 
+                           799*******************99999999998776654..........59999*****988...344454444455555555556667 PP
+
+           NCS2_SF1_C5  99 kagGlpllfgmtivaGlvelllsrllrr.....lRalfPpevaGlvVllvGislievalrrllgldeagaaldgasllvglltLavmvg 182
+                              G ++++g  i+ G++  l+s+++++     l +lfPp  +G +V+++G++l  va   +  l  +g++ d+++++++++tLav+v+
+  sp|P0AGM7|URAA_ECOLI  83 LPLGYEVALGGFIMCGVLFCLVSFIVKKagtgwLDVLFPPAAMGAIVAVIGLELAGVAAGMAGLLPAEGQTPDSKTIIISITTLAVTVL 171
+                           7789********************99753333499************************99999999********************** PP
+
+           NCS2_SF1_C5 183 lsvwgkgrlrllavliGllaGlalalllgllaledlealaaaplfalPslalpslsfdlklllpflvaalasslktvGnlvtcqkinda 271
+                            sv  +g l ++ +liG+l+G+al+ ++g   + d + + +a +falP+l +p  +f++ ++l +l aal++  + vG lv+  +i ++
+  sp|P0AGM7|URAA_ECOLI 172 GSVLFRGFLAIIPILIGVLVGYALSFAMG---IVDTTPIINAHWFALPTLYTP--RFEWFAILTILPAALVVIAEHVGHLVVTANIVKK 255
+                           *****************************...6677888999***********..9******************************999 PP
+
+           NCS2_SF1_C5 272 dwkrpDmksigrGvlAdGlgtllaGllGgmglstssanvGLsvatgatsRriglaagallillAflPklaalltliPkpVlGAillfaa 360
+                           d  r     + r+++A+Gl+t+++G++G+++++t++ n+G+ ++t++ s ++   a+++ ill+++ klaa++ +iP pV+G++ l + 
+  sp|P0AGM7|URAA_ECOLI 256 DLLRD--PGLHRSMFANGLSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLY 342
+                           98774..5689****************************************************************************** PP
+
+           NCS2_SF1_C5 361 aflivsGieliasrmlDsRktfvvGl.s..lllglsvellpelyaqlpellqplvsssLavgtltailLnllfri 432
+                             + +sGi ++    +D  k     l s  l++g+s + +    a+l          ++a++t++ i L+l+f++
+  sp|P0AGM7|URAA_ECOLI 343 GVIGASGIRVLIESKVDYNKAQNLILtSviLIIGVSGAKVNIGAAEL---------KGMALATIVGIGLSLIFKL 408
+                           ***************99777543333131144454444444333333.........4677777777777777775 PP
+
+>> NCS2_SF1_C4-Arc-Bac-Euk  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.9  37.9   1.1e-38   4.2e-38      32     427 ..       7     379 ..       3     418 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 121.9 bits;  conditional E-value: 1.1e-38
+  NCS2_SF1_C4-Arc-Bac-Euk  32 giedkPplsesillglQhyLtmlgatvavplilaealgmdeeevarligtvfvvsGiaTLlqttl.GnrlPivqgasFsflapala 116
+                              g++++Ppl ++i l+lQh ++m+gatv+vp+++  +    +       +tv++  Gi TLl   +   ++P   g+sF+f++p+l 
+     sp|P0AGM7|URAA_ECOLI   7 GVSERPPLLQTIPLSLQHLFAMFGATVLVPVLFHIN----P-------ATVLLFNGIGTLLYLFIcKGKIPAYLGSSFAFISPVLL 81 
+                              789****************************98532....2.......699***********9994458****************9 PP
+
+  NCS2_SF1_C4-Arc-Bac-Euk 117 iiaavkakgnadweaalrelqgaiivaslvevviGy...sgligklkrllsPvviapvialigLslfsagqes...........ag 188
+                              ++          +e    +l g i+++ l+ + + +      +g l  l+ P  ++ ++a+igL l  +++ +            +
+     sp|P0AGM7|URAA_ECOLI  82 LLPLG-------YE---VALGGFIMCGVLFCL-VSFivkKAGTGWLDVLFPPAAMGAIVAVIGLELAGVAAGMagllpaegqtpDS 156
+                              99887.......22...245666666555433.33311134479999*******************99988754666755555334 PP
+
+  NCS2_SF1_C4-Arc-Bac-Euk 189 knweillltlllivlfsqylkkksrifklfpvllaiviawllaalltvtgvyeegspkyvdlsavasaplirvpyplqwGvpkftl 274
+                              k++ i++ tl + vl s + +     + + p+l+++++ ++l++++ +           vd++ + +a+++  p+ +   +p+f++
+     sp|P0AGM7|URAA_ECOLI 157 KTIIISITTLAVTVLGSVLFRG---FLAIIPILIGVLVGYALSFAMGI-----------VDTTPIINAHWFALPTLY---TPRFEW 225
+                              4445555555444444444443...47889999999999999998755...........566789*******99887...6***** PP
+
+  NCS2_SF1_C4-Arc-Bac-Euk 275 afvvgmlagvlasiieSiGdYhavarlagagapskkrinrgigleGlgnvlaGllGtgngsTsyseNigaiglTkvaSRrVvqvga 360
+                               +++++l ++l+ i e +G    +a++++++      + r+++++Gl++v++G +G ++ +T+y eNig++++T+v S  V+  +a
+     sp|P0AGM7|URAA_ECOLI 226 FAILTILPAALVVIAEHVGHLVVTANIVKKDLLRDPGLHRSMFANGLSTVISGFFG-STPNTTYGENIGVMAITRVYSTWVIGGAA 310
+                              ********************************************************.66*************************** PP
+
+  NCS2_SF1_C4-Arc-Bac-Euk 361 vvllvlglvgkfgaliatiPspivgglyialfgliaavGlsnl..kyvdldssRnlfivGfalflgLal 427
+                              ++ ++l++vgk++a+i  iP p++gg+ + l+g+i+a G++ l  ++vd ++  nl++  + l++g++ 
+     sp|P0AGM7|URAA_ECOLI 311 IFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGVIGASGIRVLieSKVDYNKAQNLILTSVILIIGVSG 379
+                              ******************************************955689****************99875 PP
+
+>> NCS2_SF1_C3-YbbY  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.6  31.9   1.8e-29   6.8e-29      94     399 ..      92     402 ..      20     419 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 91.6 bits;  conditional E-value: 1.8e-29
+      NCS2_SF1_C3-YbbY  94 tgillsGvllillglt...glikklkklFtplVtgvyLlLLalqLsgtflkgmlgiee..sgkidlkvallsllvvllvlllsrkgkgl 177
+                           +g++++Gvl+ l++++     + +l  lF p+ +g +  +++l+L+g+   gm g+     ++ d k++++s++++++++l s+  +g+
+  sp|P0AGM7|URAA_ECOLI  92 GGFIMCGVLFCLVSFIvkkAGTGWLDVLFPPAAMGAIVAVIGLELAGVAA-GMAGLLPaeGQTPDSKTIIISITTLAVTVLGSVLFRGF 179
+                           6899999999999876322346799**********************874.5555544367999************************* PP
+
+      NCS2_SF1_C3-YbbY 178 lksyavLigilvGwllyallgkaeaveassselfslpelfafglpefdagiiltalltgllllsNtlaSiqaveevlkekeeek.ryrr 265
+                           l  + +Lig+lvG +l +++g  +++++ ++++f+lp+l    +p+f++ +ilt+l ++l++++  ++ + ++++++k++  ++  + r
+  sp|P0AGM7|URAA_ECOLI 180 LAIIPILIGVLVGYALSFAMGIVDTTPIINAHWFALPTL---YTPRFEWFAILTILPAALVVIAEHVGHLVVTANIVKKDLLRDpGLHR 265
+                           ************************************999...68************************************88777**** PP
+
+      NCS2_SF1_C3-YbbY 266 gllvtGvstllsGlfgvvgvvplsssaGfiaatgiasrlpfliaslllillslfPplvaflaslPapVgyavllviflqllglalkelk 354
+                           +++++G+st++sG+fg  + +++   +G++a t+++s +    a+++ ills++ +l+a ++++P pV++ v l ++  + +++++ l 
+  sp|P0AGM7|URAA_ECOLI 266 SMFANGLSTVISGFFGSTPNTTYGENIGVMAITRVYSTWVIGGAAIFAILLSCVGKLAAAIQMIPLPVMGGVSLLLYGVIGASGIRVLI 354
+                           ***************************************************************************************98 PP
+
+      NCS2_SF1_C3-YbbY 355 kee...ldernlliiglplllGvgimflpaeafaslppllrpllsNGL 399
+                           + +   ++ +nl+  ++ l++Gv+   +   a +   ++l+++++ GL
+  sp|P0AGM7|URAA_ECOLI 355 ESKvdyNKAQNLILTSVILIIGVSGAKVNIGAAELKGMALATIVGIGL 402
+                           755345666789999999999*99888777777776777777777665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (429 residues searched)
+Target model(s):                          31  (15136 nodes)
+Passed MSV filter:                        25  (0.806452); expected 0.6 (0.02)
+Passed bias filter:                        8  (0.258065); expected 0.6 (0.02)
+Passed Vit filter:                         8  (0.258065); expected 0.0 (0.001)
+Passed Fwd filter:                         8  (0.258065); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.11u 0.04s 00:00:00.15 Elapsed: 00:00:00.16
+# Mc/sec: 40.58
+//
+[ok]

@@ -1,0 +1,69 @@
+<div class="offset-2 col-md-8">
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div>
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <div class="form-group col-12">
+                <h3>Paste Protein Sequences (fasta format)</h3>
+                <textarea class="form-control" name="fasta_text" id="field_fasta_text" rows="10"
+                          [(ngModel)]="upload.fasta_text"></textarea>
+            </div>
+            <div class="col-3 offset-9">
+                <button type="button" (click)="testdata()" class="btn btn-secondary">
+                    <span class="fa fa-file-text"> </span> Paste test sequence
+                </button>
+            </div>
+
+            <div class="form-group col-12">
+                <h5 style="font-weight: bold">or</h5>
+                <h3>Upload Fasta File</h3>
+                <div class="row">
+                    <div class="col-3 offset-9">
+                        <label class="btn btn-secondary">
+                            <span class="fa fa-upload"></span>&nbsp;&nbsp;<span>Choose file</span>
+                            <input type="file" class="form-control-file"
+                                   (change)="setFileData($event, upload, 'fasta_file', false)"
+                                          jhiTranslate="entity.action.addblob" hidden/>
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="upload.fasta_file" class="row form-text text-danger">
+                    <div class="col-4">
+                        File selected bytesize: {{byteSize(upload.fasta_file)}}
+                    </div>
+                    <div class="col-4">
+                        <button type="button" (click)="upload.fasta_file=null;upload.fasta_fileContentType=null;"
+                                class="btn btn-secondary">
+                            <span class="fa fa-times"></span> Remove file
+                        </button>
+                    </div>
+                </div>
+                <input type="hidden" class="form-control" name="fasta_file" id="field_fasta_file"
+                       [(ngModel)]="upload.fasta_file"/>
+                <input type="hidden" class="form-control" name="fasta_fileContentType"
+                       id="field_fasta_fileContentType"
+                       [(ngModel)]="upload.fasta_fileContentType"/>
+            </div>
+            <div class="form-group col-12">
+                <h3>Copy link to the results page</h3>
+                <div class="row">
+                    <p class="col-9">After submitting your protein sequences you will be redirected
+                        to the results page with token {{upload.id}}. To visit your results page for this submission
+                        at a later time press button to copy link address to the results page.</p>
+                    <div class="col-3">
+                        <button type="button" (click)="copyTextToClipboard()" class="btn btn-secondary">
+                            <span class="fa fa-clipboard"></span>  Copy to clipboard
+                        </button>
+                        <input hidden type="text" class="form-control" id="id" name="id"
+                               [(ngModel)]="upload.id" readonly/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-12">
+                <button  type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <span class="fa fa-send"></span>&nbsp;&nbsp;<span>Submit</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

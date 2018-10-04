@@ -1,0 +1,87 @@
+<div class="offset-md-2 col-md-8">
+    <h3>Tutorial: How to detect if your protein sequence belongs to the NAT-NCS2 family</h3>
+
+    <p><strong style="color: red">Step 1:</strong> Visit the link <a href="http://localhost">http://bioinf.bio.uth.gr/nat-ncs2</a> and you will be redirected to the homepage of NAT-NCS2 web server</p>
+
+    <img src="/images/tut1.png" width="100%"/>
+
+    <p>Figure 1</p>
+
+
+    <p><strong style="color: red">Step 2:</strong> While you are at the homepage of NAT-NCS2 web server, you have 3 different options:</p>
+
+    <ol>
+        <li>You may click the button “Paste test sequence”. This option will load the sequence P0AGM7 (Uniprot - https://www.uniprot.org/uniprot/P0AGM7), a known protein, which has been annotated as Uracil Permease</li>
+        <li>You may paste your own sequence in FASTA format</li>
+        <li>You may upload a file with sequences in FASTA format</li>
+    </ol>
+
+    <p>For simplicity, we can assume that you clicked the “Paste test sequence” button and now you can see the sequence <em>P0AGM7 in the “Paste Protein Sequence” box (Figure 2). If you have chosen a different option, the following steps are the same, the only difference will be the results.</em></p>
+
+    <img src="/images/tut2.png" width="100%"/>
+
+    <p>Figure 2</p>
+
+    <p><strong style="color: red">Step 3:</strong> Now that you have load your sequence(s), you can click the “Submit” button (Figure 2) and you will be redirected to a new web page (Figure 3). On this web page, the server informs you if your analysis has started. For ~50 sequences it takes less than 30 sec., but if you have loaded many sequences and you do not want to wait, you can keep the URL and save it somewhere, either from the address bar of your browser, or by clicking the “Copy to clipboard” button and revisit the specific URL later. You can also bookmark the specific URL. The results will be kept on the web server for 30 days.</p>
+
+    <img src="/images/tut3.png" width="100%"/>
+    <p>Figure 3</p>
+
+    <p><strong style="color: red">Step 4: </strong>At the end of the analysis, you will be redirected to the web page with the results (Figure 4). On this page you will receive a list with proteins that has been identified by our models, as NAT-NCS2. If you want to visualize the results (step 5) for a specific protein, you can click on the name of the protein (blue letters – FASTA identifier). If you want to download the results, you can click on the “Download results” button and you will receive a tsv file.</p>
+
+    <img src="/images/tut4.png" width="100%"/>
+
+    <p>Figure 4</p>
+
+    <p><strong style="color: red">Step 5:</strong> If you clicked on the blue letters, you would be able to visualize the results for the specific protein (Figure 5). There are 2 distinct areas. The first one, is the red box with the number 1. In this area, you can see the sequence of the specific protein, with some boxes filled with different color. These boxes are our Hidden Markov Models. The second area, is the table with the seven columns (red boxes 2-6), under the sequence. More information about each of the red boxes in the Figure 5:</p>
+
+    <ol>
+        <li>In the red box 1, you can see the sequence of the specific protein with the HMMs that hit it. You may also
+            magnify the sequence (Figure 6). You can click and slide on the sequence with your mouse or trackpad.
+            The result of this action will be the magnification of the sequence(Figure 6). You will be able to see each
+            one of the amino acids. Furthermore, in each of the colored boxes, there is a number in the center of them.
+            This number corresponds to the number in the red box 2.</li>
+        <li>Each row of this table corresponds to a specific Hidden Markov Model, that has hit the protein. In the
+            first column of the table there is a number. This number corresponds to the specific HMM.</li>
+        <li>The logo of the specific HMM. Some of the logos have been edited according to the information of crystal
+            structures. More specifically, the logos of SubFamily1_Cluster 1 – Xanthine/Uric Acid and SubFamily1_Cluster
+            2 – Uracil (more information here: <a href="http://localhost/#/info" target="_blank">
+                http://bioinf.bio.uth.gr/nat-ncs2/#/info</a> ) have been edited according to information retrieved
+            from bibliography and PDB. The red arrow indicates information for the specific amino acid retrieved from
+            bibliography. When there are information from bibliography, then you will see a red magnify glass. If you
+            click on the magnify glass, a box will pop up with information about the specific motif. The red circle
+            indicates that the specific amino acid act as a binding site, according to PDB. The blue bars correspond
+            to structural information, retrieved from the crystal structures. For the SubFamily1_Cluster 1 –
+            Xanthine/Uric Acid we used the crystal structure of 5I6C (
+            <a href="https://www.rcsb.org/pdb/explore/explore.do?structureId=5I6C" target="_blank">
+                https://www.rcsb.org/pdb/explore/explore.do?structureId=5I6C</a> ) and for the SubFamily1_Cluster 2 –
+            Uracil we used the crystal structure of 5XLS (
+            <a href="https://www.rcsb.org/pdb/explore/explore.do?structureId=5xls" target="_blank">
+                https://www.rcsb.org/pdb/explore/explore.do?structureId=5xls</a> ).</li>
+        <li>In the red box with number 4, you can see the name of the specific motif.</li>
+        <li>In the red box with the number 5 you can see the i--Evalue of the specific HMM. The “independent E-value”,
+            the E-value that the sequence/profile comparison would have received if this were the only domain envelope
+            found in it, excluding any others. This is a stringent measure of how reliable this particular domain may be.</li>
+        <li>In the red box with number 6 you can see the start and end coordination of the specific HMM with respect to the sequence.</li>
+    </ol>
+
+    <img src="/images/tut5.png" width="100%"/>
+
+    <p>Figure 5</p>
+
+    <img src="/images/tut6.png" width="100%"/>
+
+    <p>Figure 6</p>
+
+    <img src="/images/tut7.png" width="100%"/>
+
+    <p>Figure 7</p>
+
+    <p><strong style="color: red">Step 6:</strong> As we said in step 4, you have the option to download the results. If you clicked the “Download Results” then you already have downloaded them in a tsv file. You may open the file with any text editor you like and you will see a table almost the same as the table in the website. There are two new columns Domain Name and Domain Score (Figure 8). The “Domain Name” indicates to an HMM which has been created from the core domain of the proteins in the clusters and the “Domain Score” is the E-value of the specific domain. All the other columns are the same with slightly different order.</p>
+
+    <img src="/images/tut8.png" width="100%"/>
+
+    <p>Figure 8</p>
+
+
+</div>

@@ -1,0 +1,66 @@
+<div class="offset-1 col-md-10">
+    <div class="row">
+        <div class="col-8">
+            <h2>
+                <span>Results</span>
+            </h2>
+        </div>
+        <div class="col-4">
+            <div *ngIf="uploadResults"><a style="float: right;" class="btn btn-primary btn-sm" [href]="fileUrl">
+                <i class="fa fa-download" aria-hidden="true"></i> Download results</a></div>
+        </div>
+    </div>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div *ngIf="!uploadResults" class="row">
+        <div class="form-group col-9">
+            <p>Press button to copy the address of this page or add it to your bookmarks, so you can return here later</p>
+        </div>
+        <div class="form-group col-3">
+            <button type="button" (click)="copyTextToClipboard()" class="btn btn-secondary pull-right">
+                <span class="fa fa-clipboard"></span> Copy to clipboard
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="uploadResults">
+        <!--<br><br><button class="btn btn-primary btn-sm" (click)="getFile(true)">-->
+        <!--Download Results-->
+        <!--</button>-->
+
+        <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="w-20">Protein</th>
+                    <th class="w-20">Subfamily/Evolutionary Cluster</th>
+                    <th class="w-20">E-value</th>
+                    <th class="w-20">Meme Motifs Found</th>
+                    <th class="w-40">Known Substrates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let result of proteins">
+                    <td><a style="color: #0275d8;text-decoration: none;" (click)="changeSelectedProtein(result)">{{result.name}} <i  aria-hidden="true" class="fa fa-eye"></i></a></td>
+                    <td>{{result.domain}}</td>
+                    <td>{{result.domainScore}}</td>
+                    <td>{{result.motifs.length}}</td>
+                    <td>{{result.substrates}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div>
+            <div class="row justify-content-center">
+                <jhi-item-count [(page)]="page" [(total)]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [(collectionSize)]="totalItems" [(page)]="page" [pageSize]="itemsPerPage"
+                                [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+        <br>
+        <jhi-app-d3-component3 [protein]="selectedProtein"></jhi-app-d3-component3>
+        <br>
+    </div>
+</div>

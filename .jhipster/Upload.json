@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "threshold",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0.1",
+            "fieldValidateRulesMax": "1.0"
+        },
+        {
+            "fieldName": "fasta_text",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "fasta_file",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "changelogDate": "20170510135126",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "upload",
+    "pagination": "pagination"
+}
