@@ -14,8 +14,8 @@ How to compile and deploy webserver on Ubuntu
 
 ## 2. Clone Projectm compile and deploy
 
-    git clone 
-    cd phophpred/
+    git clone https://github.com/pvlastaridis/nat-ncs2.git
+    cd nat-ncs2/
     yarn install
     sh mvnw -Dmaven.test.skip=true -Pprod package
     cp -R HMMDB/ target/
